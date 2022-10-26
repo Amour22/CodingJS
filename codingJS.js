@@ -1,7 +1,7 @@
 
 /*********************************************************************************************/
 /*
-/*                              CODING-PLUS FRAMEWORK
+/*                              	CODING-PLUS
 /*
 /*********************************************************************************************/
 
@@ -22,7 +22,7 @@
 
 /**
  * selectionner un element du DOM, diminutif de (querySelector)
- * @param {*} element  selector
+ * @param {String} element  selector
  * @returns element where selector is 'element' 
  */
 function $(element){return document.querySelector(element);}
@@ -56,10 +56,10 @@ function logg(element){ console.log(element);}
 
 /**
  * Ajouter un eventListener
- * @param {*} event 
+ * @param {String} event 
  * @param {*} element 
- * @param {*} function 
- * @param {*} booleen 
+ * @param {Callback} function 
+ * @param {Booleen} booleen 
  * @returns 
  */
 function event(event,element,newFunction,booleen=true){return element.addEventListener(event,newFunction,booleen);}
