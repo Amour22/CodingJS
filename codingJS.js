@@ -30,7 +30,7 @@ export let $ = param => document.querySelector(param);
 /**
  * selectionner un ensemble d'elements du DOM, diminutif de (querySelectorAll)
  * @param {*} elements  selector
- * @returns all element wheres selector is 'params' 
+ * @returns all element wheres selector is 'params' - [nodeList]
  */
 export let $$ = params => document.querySelectorAll(params);
 
@@ -57,8 +57,8 @@ export let $log = (param, ...params) => console.log(param, params);
 /**
  * Ajouter un eventListener
  * @param {String} event 
- * @param {*} target 
- * @param {Callback} function 
+ * @param {DOMElement} target 
+ * @param {function} callback function 
  * @param {Booleen} booleen 
  * @returns 
  */
@@ -72,8 +72,8 @@ export let $event = (event,target,callback,booleen=true) => target.addEventListe
 
 /**
  * Ajouter une class a un element du DOM
- * @param {element} element 
- * @param {class} newClass 
+ * @param {DOMElement} target 
+ * @param {class} a classname 
  * @returns 
  */
 export let $toogleClass = (target,classname) => target.classList.toggle(classname);}
