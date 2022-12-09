@@ -1,15 +1,15 @@
 
 /*********************************************************************************************/
 /*
-/*                              	CODING-PLUS
+/*                              	CODING-JS
 /*
 /*********************************************************************************************/
 
 /*********************************************************************************************/
 /*
 /*                               COPYRIGHT 2022
-/*           Créateur:amour Dahou   Date de Création:21/04/2022      Version:1.0 
-/8                            Dernière mise à jour:21/04/2022
+/*           author:amour Dahou   Date de Création:21/04/2022      Version:1.0.1 
+/8                            Dernière mise à jour:05/12/2022
 /*
 /*********************************************************************************************/
 
@@ -23,16 +23,16 @@
 /**
  * selectionner un element du DOM, diminutif de (querySelector)
  * @param {String} element  selector
- * @returns element where selector is 'element' 
+ * @returns element where selector is 'param' 
  */
-function $(element){return document.querySelector(element);}
+export let $ = param => document.querySelector(param);
 
 /**
  * selectionner un ensemble d'elements du DOM, diminutif de (querySelectorAll)
  * @param {*} elements  selector
- * @returns all element wheres selector is 'elements' 
+ * @returns all element wheres selector is 'params' 
  */
-function $$(elements){return document.querySelectorAll(elements);}
+export let $$ = params => document.querySelectorAll(params);
 
 
 /*********************************************************************************************/
@@ -43,10 +43,10 @@ function $$(elements){return document.querySelectorAll(elements);}
 
 /**
  * afficher dans la console
- * @param {*} element 
+ * @param {*} element1,elementN 
  */
 
-function logg(element){ console.log(element);}
+export let $log = (param, ...params) => console.log(param, params);
 
 /*********************************************************************************************/
 /*
@@ -57,12 +57,12 @@ function logg(element){ console.log(element);}
 /**
  * Ajouter un eventListener
  * @param {String} event 
- * @param {*} element 
+ * @param {*} target 
  * @param {Callback} function 
  * @param {Booleen} booleen 
  * @returns 
  */
-function event(event,element,newFunction,booleen=true){return element.addEventListener(event,newFunction,booleen);}
+export let $event = (event,target,callback,booleen=true) => target.addEventListener(event,callback,booleen);
 
 /*********************************************************************************************/
 /*
@@ -76,14 +76,4 @@ function event(event,element,newFunction,booleen=true){return element.addEventLi
  * @param {class} newClass 
  * @returns 
  */
-function toogleClass(el,newClass){return el.classList.toggle(newClass);}
-
-	
-/*********************************************************************************************/
-/*
-/*                            EXPORTATION DU FRAMEWORK
-/*
-/*********************************************************************************************/
-
-//exportons le framework
-export{$,$$,logg,event,toogleClass}
+export let $toogleClass = (target,classname) => target.classList.toggle(classname);}
