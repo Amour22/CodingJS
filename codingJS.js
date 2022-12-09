@@ -23,14 +23,14 @@
 /**
  * selectionner un element du DOM, diminutif de (querySelector)
  * @param {String} element  selector
- * @returns element where selector is 'param' 
+ * @returns {nodeElement} - element where selector is 'param' 
  */
 export let $ = param => document.querySelector(param);
 
 /**
  * selectionner un ensemble d'elements du DOM, diminutif de (querySelectorAll)
  * @param {*} elements  selector
- * @returns all element wheres selector is 'params' - [nodeList]
+ * @returns {nodeList} - all element wheres selector is 'params'
  */
 export let $$ = params => document.querySelectorAll(params);
 
@@ -60,7 +60,7 @@ export let $log = (param, ...params) => console.log(param, params);
  * @param {DOMElement} target 
  * @param {function} callback function 
  * @param {Booleen} booleen 
- * @returns 
+ * @returns {void}
  */
 export let $event = (event,target,callback,booleen=true) => target.addEventListener(event,callback,booleen);
 
@@ -74,6 +74,6 @@ export let $event = (event,target,callback,booleen=true) => target.addEventListe
  * Ajouter une class a un element du DOM
  * @param {DOMElement} target 
  * @param {class} a classname 
- * @returns 
+ * @returns {void}
  */
-export let $toogleClass = (target,classname) => target.classList.toggle(classname);}
+export let $toogleClass = (target,classname) => target.classList.toggle(classname);
